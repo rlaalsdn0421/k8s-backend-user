@@ -4,7 +4,7 @@ metadata:
   name: k8s-backend-user-service
 spec:
   ports:
-    - port: 8080
-      targetPort: 8080
+    - port: 8080 # 서비스에 대한 포트번호, 외부포트번호
+      targetPort: 8080 # 컨테이너의 포트번호, 내부포트번호
   selector:
     app: k8s-backend-user
