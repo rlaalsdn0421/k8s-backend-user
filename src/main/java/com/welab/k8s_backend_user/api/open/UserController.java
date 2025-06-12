@@ -26,7 +26,8 @@ public class UserController {
     }
 
     @PostMapping(value = "/register")
-    public ApiResponseDto<String> register(@RequestBody @Valid SiteUserRegisterDto registerDto) {siteUserService.registerUser(registerDto);
+    public ApiResponseDto<String> register(@RequestBody @Valid SiteUserRegisterDto registerDto) {
+        siteUserService.registerUser(registerDto);
         return ApiResponseDto.defaultOk();
     }
 }
